@@ -8,17 +8,18 @@
 </head>
 <body>
     <video id="background-video" autoplay loop muted>
-         <source src="{{ asset('videos/Tunnel Drift live wallpaper.mp4') }}" type="video/mp4">
-     </video>
+        <source src="{{ asset('videos/Tunnel Drift live wallpaper.mp4') }}" type="video/mp4">
+    </video>
 
     <div class="container">
         <header>
             <h1>Aplicación Web</h1>
+            <hr>
         </header>
         
         <div class="table-container">
             <table>
-                <caption>Autos - Listar</caption>
+                <caption style="line-height: 30px;">¡Autos - Listar!</caption>
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -30,6 +31,7 @@
                         <th>Precio</th>
                         <th>Estado</th>
                         <th>Stock</th>
+                        <th>Acción</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,11 +46,25 @@
                         <td>{{ $carta->precio }}</td>
                         <td>{{ $carta->estado }}</td>
                         <td>{{ $carta->stock }}</td>
+                        <td>
+                            <a href="{{ route('autos.edit', $carta) }}" class="btn-action">
+                                <img src="{{ asset('svg/edit-user-7-svgrepo-com.svg') }}" alt="Editar" width="16" height="16">
+                                Editar
+                            </a>
+                            |
+                            <a href="{{ route('autos.delete', $carta) }}" class="btn-action">
+                                <img src="{{ asset('svg/delete-file-2-svgrepo-com.svg') }}" alt="Borrar" width="16" height="16">
+                                Borrar
+                            </a>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
         </div>
+
+        <br>
+        <a href="{{ url('/autos/create') }}" class="btn-register">Registrar</a>
     </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'GoMono Nerd Font', monospace;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,16 +23,15 @@ body {
 
 /* Contenedor principal */
 .container {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 30px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     max-width: 1000px;
     width: 90%;
-    text-align: center;
     color: #FFFFFF;
-    margin-top: 10px;
     z-index: 10;
+    text-align: center;
 }
 
 header h1 {
@@ -42,9 +41,8 @@ header h1 {
     margin-bottom: 10px;
 }
 
-header .subtitle {
-    font-size: 1em;
-    color: rgba(255, 255, 255, 0.6);
+hr {
+    border: 1px solid #FFFFFF;
     margin-bottom: 20px;
 }
 
@@ -90,4 +88,44 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
+}
+
+/* Estilos para los enlaces de acción */
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.btn-action img {
+    vertical-align: middle;
+    filter: brightness(0) invert(1); /* Convierte el icono a blanco */
+}
+
+.btn-action:hover {
+    color: #4CAF50; /* Cambia a verde claro al pasar el ratón */
+}
+
+.btn-action img:hover {
+    filter: brightness(1) invert(0); /* Cambia el color del icono a su color original */
+}
+
+/* Botón de registro */
+.btn-register {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #3A9B3F;
 }
