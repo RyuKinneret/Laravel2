@@ -1,0 +1,122 @@
+/* Fondo y cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    position: relative;
+}
+
+/* Video de fondo */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Contenedor principal */
+.container {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    width: 90%;
+    color: #FFFFFF;
+    z-index: 10;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #FFFFFF;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 1em;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Estilo de todos los campos de entrada */
+form input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #333 !important;
+    border-radius: 5px;
+    background-color: #2C2C2C !important;
+    color: #FFFFFF !important;
+    font-size: 1em;
+    outline: none;
+}
+
+/* Ajustes para elementos de una sola columna */
+form div:nth-child(5) {
+    grid-column: span 2;
+}
+
+form .buttons {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Mensajes de error */
+.error-message {
+    color: #FF6B6B;
+    font-size: 0.9em;
+    grid-column: span 2;
+    text-align: left;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Botones */
+button[type="submit"],
+button[type="button"] {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #3A9B3F;
+}
+
+button[type="button"] {
+    background-color: #6c757d;
+}
+
+button[type="button"]:hover {
+    background-color: #5a6268;
+}

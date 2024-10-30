@@ -1,0 +1,136 @@
+/* Fondo y cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    position: relative;
+}
+
+/* Video de fondo */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Contenedor principal */
+.container {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    width: 90%;
+    color: #FFFFFF;
+    z-index: 10;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #FFFFFF;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+}
+
+/* Línea divisoria */
+hr {
+    border: 1px solid #FFFFFF;
+    margin-bottom: 20px;
+}
+
+/* Estilos de la tabla */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+table caption {
+    font-size: 1.5em;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+thead {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+thead th {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+/* Estilos para los enlaces de acción */
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.btn-action img {
+    vertical-align: middle;
+    filter: brightness(0) invert(1); /* Convierte el icono a blanco */
+}
+
+.btn-action:hover {
+    color: #4CAF50; /* Cambia a verde claro al pasar el ratón */
+}
+
+.btn-action img:hover {
+    filter: brightness(1) invert(0); /* Cambia el color del icono a su color original */
+}
+
+/* Botón de registro */
+.btn-register {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.btn-register:hover {
+    background-color: #3A9B3F;
+}

@@ -8,6 +8,12 @@ use App\Http\Requests\CreateAutoRequest;
 
 class AutoController extends Controller
 {
+    // Método para la vista de bienvenida
+    public function inicio()
+    {
+        return view('inicio');
+    }
+
     // LISTAR GET
     public function index()
     {
